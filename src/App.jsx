@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import TeamManager from './element/TeamManager'
 import './App.css'
 import Card from './element/Card'
 import Team from './element/TeamData'
+import { data } from 'autoprefixer';
 function App() {
   const [count, setCount] = useState(0)
   const [centerStack,setCenterStack] = useState([])
@@ -19,10 +20,68 @@ function App() {
   const [team3Data,setDataTeam3] = useState({knowledge:0,anti:'',os:''})
   const [team4Data,setDataTeam4] = useState({knowledge:0,anti:'',os:''})
   const [team5Data,setDataTeam5] = useState({knowledge:0,anti:'',os:''})
+  const [allCard,setAllCard] = useState([])
+  const [maxCard,setMaxCard] = useState(159);
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-  const test = [{"url": "https://i.ibb.co/R7dCLHh/2.jpg", "name": "CryptoLocker","start-turn":2,"end-turn":5},
-  {"url": "https://i.ibb.co/6brpvpw/3.jpg", "name": "Ryuk Attack","start-turn":2,"end-turn":4},
-  {"url": "https://i.ibb.co/y4xYf83/4.jpg", "name": "WannaCry Outbreak","start-turn":3,"end-turn":3}]
+  useEffect(() => {
+    fetchJSONData();
+  }, []);
+
+  function fetchJSONData() {
+    fetch("/data/data.json")
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error
+                    (`HTTP error! Status: ${res.status}`);
+            }
+            return res.json();
+        })
+        .then((data) =>
+            setAllCard(data))
+        .catch((error) =>
+            console.error("Unable to fetch data:", error));
+  }
+
+  function ranCard(){
+    let index;
+    console.log(allCard.length)
+    index = Math.floor(Math.random() * maxCard);
+    const tmp = allCard[index]
+    setMaxCard(maxCard => maxCard-1);
+    console.log(maxCard)
+    const newCard = [...allCard];
+    newCard.splice(index,1);
+    setAllCard(newCard);
+    console.log(allCard.length)
+    console.log(tmp);
+      
+  }
+
+  // useEffect(() => {
+  //   console.log(turn);
+  //   if(turn == 0) return;
+  //   setMaxCard(maxCard => maxCard-1);
+  //   console.log(maxCard); return;
+  //   if(maxCard <= 10)
+  //   {
+  //     fetchJSONData();
+  //     setMaxCard(159);
+  //   }
+    
+  //       for(let i = 0 ; i < 6 ; i++){
+  //         ranCard();
+  //       }
+      
+  // },[turn]);
+
+  const test = [  {
+    "ImageURL": "https://i.ibb.co/xF4pkgW/42.jpg",
+    "Name": "Social Media Spoofing",
+    "Times": 5,
+    "TT": 1,
+    "Defence": "DNSSEC, Secure DNS, VPN, DNS Filtering"
+  }]
 
   // setTeam1Stack(test)
   const numbers = [1,2,3,4,5,6,7,8];

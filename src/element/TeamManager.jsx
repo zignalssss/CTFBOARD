@@ -24,7 +24,6 @@ function TeamManager() {
     return (
         <div className="team-manager px-2">
             <h1>Team Manager</h1>
-
             {/* Display Knowledge Level */}
             <div className="control-panel flex justify-between px-5">
                 <h3>Knowledge Level</h3>
@@ -37,7 +36,7 @@ function TeamManager() {
 
             {/* Display Antivirus Members with Level Control */}
             <div className="control-panel">
-                <h3>Antivirus Members</h3>
+                <h3>Antivirus</h3>
                 {anti_virus.map((antivirus, index) => (
                     <div key={index} className="control-panel flex justify-between px-5">
                         <span>{antivirus}</span>
@@ -52,7 +51,7 @@ function TeamManager() {
 
             {/* Display OS Members with Level Control */}
             <div className="control-panel">
-                <h3>OS Members</h3>
+                <h3>OS</h3>
                 {OS.map((os, index) => (
                     <div key={index} className="control-panel flex justify-between px-5">
                         <span>{os}</span>
