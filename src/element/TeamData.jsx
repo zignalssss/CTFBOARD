@@ -173,7 +173,7 @@ function TeamData(props) {
                     <div className='span-col-1 grid grid-cols-3 gap-1'>
                         <button onClick={() => handleKnowledgeChange(-1)}>-</button>
                         <div className='flex items-center justify-center'>
-                            {level['knowledgeLevel']}
+                            {level['Knowledge Level']}
                         </div>
                         <button onClick={() => handleKnowledgeChange(1)}>+</button>
                     </div>
@@ -190,7 +190,7 @@ function TeamData(props) {
                     <div className='span-col-1 grid grid-cols-3 gap-1'>
                         <button onClick={() => handleAntiVersionChange(-1)}>-</button>
                         <div className='flex items-center justify-center'>
-                            {level['anti-version']}
+                            {level['Anti-Malware Version']}
                         </div>
                         <button onClick={() => handleAntiVersionChange(1)}>+</button>
                     </div>
@@ -207,7 +207,7 @@ function TeamData(props) {
                     <div className='span-col-1 grid grid-cols-3 gap-1'>
                         <button onClick={() => handleOSVersionChange(-1)}>-</button>
                         <div className='flex items-center justify-center'>
-                            {level['os-version']}
+                            {level['OS Version']}
                         </div>
                         <button onClick={() => handleOSVersionChange(1)}>+</button>
                     </div>

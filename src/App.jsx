@@ -58,22 +58,22 @@ function App() {
       
   }
 
-  // useEffect(() => {
-  //   console.log(turn);
-  //   if(turn == 0) return;
-  //   setMaxCard(maxCard => maxCard-1);
-  //   console.log(maxCard); return;
-  //   if(maxCard <= 10)
-  //   {
-  //     fetchJSONData();
-  //     setMaxCard(159);
-  //   }
+  useEffect(() => {
+    console.log(turn);
+    if(turn == 0) return;
+    setMaxCard(maxCard => maxCard-1);
+    console.log(maxCard); return;
+    if(maxCard <= 10)
+    {
+      fetchJSONData();
+      setMaxCard(159);
+    }
     
-  //       for(let i = 0 ; i < 6 ; i++){
-  //         ranCard();
-  //       }
+        for(let i = 0 ; i < 6 ; i++){
+          ranCard();
+        }
       
-  // },[turn]);
+  },[turn]);
 
   const test = [  {
     "ImageURL": "https://i.ibb.co/xF4pkgW/42.jpg",
