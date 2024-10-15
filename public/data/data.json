@@ -74,294 +74,294 @@
     "Name": "XSS Attack on User Login",
     "Times": 0,
     "TT": 0,
-    "Defence": "CSP, Input and Output Encoding, Input Validation and Sanitization"
+    "Defence": "CSP,Input and Output Encoding,Input Validation and Sanitization"
   },
   {
     "ImageURL": "https://i.ibb.co/Km2vhW8/13.jpg",
     "Name": "Stored XSS in Comment Section",
     "Times": 0,
     "TT": 0,
-    "Defence": "CSP, Input and Output Encoding, Input Validation and Sanitization"
+    "Defence": "CSP,Input and Output Encoding,Input Validation and Sanitization"
   },
   {
     "ImageURL": "https://i.ibb.co/n0qgnRk/14.jpg",
     "Name": "Reflected XSS via Search Bar",
     "Times": 0,
     "TT": 0,
-    "Defence": "CSP, Input and Output Encoding, Input Validation and Sanitization"
+    "Defence": "CSP,Input and Output Encoding,Input Validation and Sanitization"
   },
   {
     "ImageURL": "https://i.ibb.co/5BNVQy1/15.jpg",
     "Name": "XSS in Admin Dashboard",
     "Times": 0,
     "TT": 0,
-    "Defence": "CSP, Input and Output Encoding, Input Validation and Sanitization"
+    "Defence": "CSP,Input and Output Encoding,Input Validation and Sanitization"
   },
   {
     "ImageURL": "https://i.ibb.co/LRF013W/16.jpg",
     "Name": "XSS via Image Upload",
     "Times": 0,
     "TT": 0,
-    "Defence": "CSP, Input and Output Encoding, Input Validation and Sanitization"
+    "Defence": "CSP,Input and Output Encoding,Input Validation and Sanitization"
   },
   {
     "ImageURL": "https://i.ibb.co/tZVZ7Y2/17.jpg",
     "Name": "XSS Attack on Contact Form",
     "Times": 0,
     "TT": 0,
-    "Defence": "CSP, Input and Output Encoding, Input Validation and Sanitization"
+    "Defence": "CSP,Input and Output Encoding,Input Validation and Sanitization"
   },
   {
     "ImageURL": "https://i.ibb.co/G0Wx7T9/18.jpg",
     "Name": "Persistent XSS on Forum",
     "Times": 0,
     "TT": 0,
-    "Defence": "CSP, Input and Output Encoding, Input Validation and Sanitization"
+    "Defence": "CSP,Input and Output Encoding,Input Validation and Sanitization"
   },
   {
     "ImageURL": "https://i.ibb.co/7nZ3tTm/19.jpg",
     "Name": "DOM-Based XSS in User Profile",
     "Times": 0,
     "TT": 0,
-    "Defence": "CSP, Input and Output Encoding, Input Validation and Sanitization"
+    "Defence": "CSP,Input and Output Encoding,Input Validation and Sanitization"
   },
   {
     "ImageURL": "https://i.ibb.co/GWRHRfr/20.jpg",
     "Name": "XSS in External Widget",
     "Times": 0,
     "TT": 0,
-    "Defence": "CSP, Input and Output Encoding, Input Validation and Sanitization"
+    "Defence": "CSP,Input and Output Encoding,Input Validation and Sanitization"
   },
   {
     "ImageURL": "https://i.ibb.co/rFMF4P0/21.jpg",
     "Name": "XSS in Third-Party API",
     "Times": 0,
     "TT": 0,
-    "Defence": "CSP, Input and Output Encoding, Input Validation and Sanitization"
+    "Defence": "CSP,Input and Output Encoding,Input Validation and Sanitization"
   },
   {
     "ImageURL": "https://i.ibb.co/3Ny10vS/22.jpg",
     "Name": "Session Hijacking via Cookies",
     "Times": 0,
     "TT": 0,
-    "Defence": "Encryption, VPN, SID Regeneration, Strict Session, Session Timeout"
+    "Defence": "Encryption,VPN,SID Regeneration,Strict Session,Session Timeout"
   },
   {
     "ImageURL": "https://i.ibb.co/VTdT61S/23.jpg",
     "Name": "MITM Session Hijack",
     "Times": 0,
     "TT": 0,
-    "Defence": "Encryption, VPN, SID Regeneration, Strict Session, Session Timeout"
+    "Defence": "Encryption,VPN,SID Regeneration,Strict Session,Session Timeout"
   },
   {
     "ImageURL": "https://i.ibb.co/YXbLVwr/24.jpg",
     "Name": "Session Fixation Attack",
     "Times": 0,
     "TT": 0,
-    "Defence": "Encryption, VPN, SID Regeneration, Strict Session, Session Timeout"
+    "Defence": "Encryption,VPN,SID Regeneration,Strict Session,Session Timeout"
   },
   {
     "ImageURL": "https://i.ibb.co/V2rMTLX/25.jpg",
     "Name": "Cross-Site Session Hijacking",
     "Times": 0,
     "TT": 0,
-    "Defence": "Encryption, VPN, SID Regeneration, Strict Session, Session Timeout"
+    "Defence": "Encryption,VPN,SID Regeneration,Strict Session,Session Timeout"
   },
   {
     "ImageURL": "https://i.ibb.co/Ttv5xZN/26.jpg",
     "Name": "URL-Based Session Hijack",
     "Times": 0,
     "TT": 0,
-    "Defence": "Encryption, VPN, SID Regeneration, Strict Session, Session Timeout"
+    "Defence": "Encryption,VPN,SID Regeneration,Strict Session,Session Timeout"
   },
   {
     "ImageURL": "https://i.ibb.co/17Bsyyv/27.jpg",
     "Name": "Wi-Fi Session Hijack",
     "Times": 0,
     "TT": 0,
-    "Defence": "Encryption, VPN, SID Regeneration, Strict Session, Session Timeout"
+    "Defence": "Encryption,VPN,SID Regeneration,Strict Session,Session Timeout"
   },
   {
     "ImageURL": "https://i.ibb.co/sw5dS7W/28.jpg",
     "Name": "Session Hijack via Mobile App",
     "Times": 0,
     "TT": 0,
-    "Defence": "Encryption, VPN, SID Regeneration, Strict Session, Session Timeout"
+    "Defence": "Encryption,VPN,SID Regeneration,Strict Session,Session Timeout"
   },
   {
     "ImageURL": "https://i.ibb.co/TRdjS5w/29.jpg",
     "Name": "Session Token Interception",
     "Times": 0,
     "TT": 0,
-    "Defence": "Encryption, VPN, SID Regeneration, Strict Session, Session Timeout"
+    "Defence": "Encryption,VPN,SID Regeneration,Strict Session,Session Timeout"
   },
   {
     "ImageURL": "https://i.ibb.co/KmrVKTY/30.jpg",
     "Name": "Session Hijacking via WebSocket",
     "Times": 0,
     "TT": 0,
-    "Defence": "Encryption, VPN, SID Regeneration, Strict Session, Session Timeout"
+    "Defence": "Encryption,VPN,SID Regeneration,Strict Session,Session Timeout"
   },
   {
     "ImageURL": "https://i.ibb.co/RSMXtzs/31.jpg",
     "Name": "Session Replay Attack",
     "Times": 0,
     "TT": 0,
-    "Defence": "Encryption, VPN, SID Regeneration, Strict Session, Session Timeout"
+    "Defence": "Encryption,VPN,SID Regeneration,Strict Session,Session Timeout"
   },
   {
     "ImageURL": "https://i.ibb.co/1G5j0L6/32.jpg",
     "Name": "Administrator Access Gained",
     "Times": 0,
     "TT": 0,
-    "Defence": "OS Version, MFA, Least Privilege, Access Control Monitoring"
+    "Defence": "OS Version,MFA,Least Privilege,Access Control Monitoring"
   },
   {
     "ImageURL": "https://i.ibb.co/kxhgmNj/33.jpg",
     "Name": "Root Access Compromise",
     "Times": 0,
     "TT": 0,
-    "Defence": "OS Version, MFA, Least Privilege, Access Control Monitoring"
+    "Defence": "OS Version,MFA,Least Privilege,Access Control Monitoring"
   },
   {
     "ImageURL": "https://i.ibb.co/j5t086V/34.jpg",
     "Name": "Remote Access Escalation",
     "Times": 0,
     "TT": 0,
-    "Defence": "OS Version, MFA, Least Privilege, Access Control Monitoring"
+    "Defence": "OS Version,MFA,Least Privilege,Access Control Monitoring"
   },
   {
     "ImageURL": "https://i.ibb.co/fp9r4R2/35.jpg",
     "Name": "Database Admin Privilege Escalation",
     "Times": 0,
     "TT": 0,
-    "Defence": "OS Version, MFA, Least Privilege, Access Control Monitoring"
+    "Defence": "OS Version,MFA,Least Privilege,Access Control Monitoring"
   },
   {
     "ImageURL": "https://i.ibb.co/wYwZqzq/36.jpg",
     "Name": "System Service Privilege Hijack",
     "Times": 0,
     "TT": 0,
-    "Defence": "OS Version, MFA, Least Privilege, Access Control Monitoring"
+    "Defence": "OS Version,MFA,Least Privilege,Access Control Monitoring"
   },
   {
     "ImageURL": "https://i.ibb.co/BPbs6Yq/37.jpg",
     "Name": "Exploit Vulnerability for Privilege Elevation",
     "Times": 0,
     "TT": 0,
-    "Defence": "OS Version, MFA, Least Privilege, Access Control Monitoring"
+    "Defence": "OS Version,MFA,Least Privilege,Access Control Monitoring"
   },
   {
     "ImageURL": "https://i.ibb.co/gTckNS0/38.jpg",
     "Name": "DNS Poisoning Attack",
     "Times": 5,
     "TT": 1,
-    "Defence": "DNSSEC, Secure DNS, VPN, DNS Filtering"
+    "Defence": "DNSSEC,Secure DNS,VPN,DNS Filtering"
   },
   {
     "ImageURL": "https://i.ibb.co/HBYxwrP/39.jpg",
     "Name": "Fake Bank Website Redirect",
     "Times": 7,
     "TT": 1,
-    "Defence": "DNSSEC, Secure DNS, VPN, DNS Filtering"
+    "Defence": "DNSSEC,Secure DNS,VPN,DNS Filtering"
   },
   {
     "ImageURL": "https://i.ibb.co/3vNTv0Y/40.jpg",
     "Name": "E-Commerce Hijack",
     "Times": 4,
     "TT": 1,
-    "Defence": "DNSSEC, Secure DNS, VPN, DNS Filtering"
+    "Defence": "DNSSEC,Secure DNS,VPN,DNS Filtering"
   },
   {
     "ImageURL": "https://i.ibb.co/Zm9z7Lh/41.jpg",
     "Name": "Government Site Spoof",
     "Times": 4,
     "TT": 1,
-    "Defence": "DNSSEC, Secure DNS, VPN, DNS Filtering"
+    "Defence": "DNSSEC,Secure DNS,VPN,DNS Filtering"
   },
   {
     "ImageURL": "https://i.ibb.co/xF4pkgW/42.jpg",
     "Name": "Social Media Spoofing",
     "Times": 5,
     "TT": 1,
-    "Defence": "DNSSEC, Secure DNS, VPN, DNS Filtering"
+    "Defence": "DNSSEC,Secure DNS,VPN,DNS Filtering"
   },
   {
     "ImageURL": "https://i.ibb.co/3y91BHV/43.jpg",
     "Name": "Corporate DNS Spoof",
     "Times": 6,
     "TT": 1,
-    "Defence": "DNSSEC, Secure DNS, VPN, DNS Filtering"
+    "Defence": "DNSSEC,Secure DNS,VPN,DNS Filtering"
   },
   {
     "ImageURL": "https://i.ibb.co/mcPQhCX/44.jpg",
     "Name": "News Portal Phishing",
     "Times": 8,
     "TT": 1,
-    "Defence": "DNSSEC, Secure DNS, VPN, DNS Filtering"
+    "Defence": "DNSSEC,Secure DNS,VPN,DNS Filtering"
   },
   {
     "ImageURL": "https://i.ibb.co/JCBxMms/45.jpg",
     "Name": "Public Wi-Fi DNS Spoof",
     "Times": 5,
     "TT": 1,
-    "Defence": "DNSSEC, Secure DNS, VPN, DNS Filtering"
+    "Defence": "DNSSEC,Secure DNS,VPN,DNS Filtering"
   },
   {
     "ImageURL": "https://i.ibb.co/FBd4V9W/46.jpg",
     "Name": "Healthcare Portal Spoofing",
     "Times": 4,
     "TT": 1,
-    "Defence": "DNSSEC, Secure DNS, VPN, DNS Filtering"
+    "Defence": "DNSSEC,Secure DNS,VPN,DNS Filtering"
   },
   {
     "ImageURL": "https://i.ibb.co/qBj6T5f/47.jpg",
     "Name": "Educational Site Hijack",
     "Times": 5,
     "TT": 1,
-    "Defence": "DNSSEC, Secure DNS, VPN, DNS Filtering"
+    "Defence": "DNSSEC,Secure DNS,VPN,DNS Filtering"
   },
   {
     "ImageURL": "https://i.ibb.co/XzfLhDT/48.jpg",
     "Name": "Database Brute Force",
     "Times": 3,
     "TT": 0,
-    "Defence": "Strong Password, Account Lockout, MFA"
+    "Defence": "Strong Password,Account Lockout,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/h10zynr/49.jpg",
     "Name": "SSH Brute Force Attack",
     "Times": 8,
     "TT": 0,
-    "Defence": "Strong Password, Account Lockout, MFA"
+    "Defence": "Strong Password,Account Lockout,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/SrfWvYs/50.jpg",
     "Name": "Cloud Service Brute Force",
     "Times": 4,
     "TT": 0,
-    "Defence": "Strong Password, Account Lockout, MFA"
+    "Defence": "Strong Password,Account Lockout,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/fSwpZZh/51.jpg",
     "Name": "Social Media Account Brute Force",
     "Times": 5,
     "TT": 0,
-    "Defence": "Strong Password, Account Lockout, MFA"
+    "Defence": "Strong Password,Account Lockout,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/qDDbtcV/52.jpg",
     "Name": "API Key Brute Force",
     "Times": 6,
     "TT": 0,
-    "Defence": "Strong Password, Account Lockout, MFA"
+    "Defence": "Strong Password,Account Lockout,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/vstTQ7r/53.jpg",
     "Name": "VoIP Brute Force Attack",
     "Times": 6,
     "TT": 0,
-    "Defence": "Strong Password, Account Lockout, MFA"
+    "Defence": "Strong Password,Account Lockout,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/88rBNPp/54.jpg",
@@ -578,545 +578,545 @@
     "Name": "Compromised Tech Blog",
     "Times": 7,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall"
+    "Defence": "Anti-Malware Version,Firewall"
   },
   {
     "ImageURL": "https://i.ibb.co/yyBhT3d/85.jpg",
     "Name": "Infected News Portal",
     "Times": 4,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall"
+    "Defence": "Anti-Malware Version,Firewall"
   },
   {
     "ImageURL": "https://i.ibb.co/4phrLP0/86.jpg",
     "Name": "Hacked Vendor Website",
     "Times": 3,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall, Knowledge Level"
+    "Defence": "Anti-Malware Version,Firewall,Knowledge Level"
   },
   {
     "ImageURL": "https://i.ibb.co/yN61hR3/87.jpg",
     "Name": "Targeted Development Forum",
     "Times": 5,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall"
+    "Defence": "Anti-Malware Version,Firewall"
   },
   {
     "ImageURL": "https://i.ibb.co/cNRZLzQ/88.jpg",
     "Name": "Compromised E-Learning Platform",
     "Times": 4,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall"
+    "Defence": "Anti-Malware Version,Firewall"
   },
   {
     "ImageURL": "https://i.ibb.co/55QP1ft/89.jpg",
     "Name": "Malicious Web Hosting Service",
     "Times": 7,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall"
+    "Defence": "Anti-Malware Version,Firewall"
   },
   {
     "ImageURL": "https://i.ibb.co/X3xzkTn/90.jpg",
     "Name": "Infected Social Media Ad",
     "Times": 7,
     "TT": 1,
-    "Defence": "Anti-Malware Version, Firewall"
+    "Defence": "Anti-Malware Version,Firewall"
   },
   {
     "ImageURL": "https://i.ibb.co/pXn82XX/91.jpg",
     "Name": "Contaminated Job Search Site",
     "Times": 7,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall"
+    "Defence": "Anti-Malware Version,Firewall"
   },
   {
     "ImageURL": "https://i.ibb.co/hRD2gp6/92.jpg",
     "Name": "Hacked Industry Conference Website",
     "Times": 7,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall"
+    "Defence": "Anti-Malware Version,Firewall"
   },
   {
     "ImageURL": "https://i.ibb.co/WDkJ2R5/93.jpg",
     "Name": "Compromised File Sharing Platform",
     "Times": 7,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall"
+    "Defence": "Anti-Malware Version,Firewall"
   },
   {
     "ImageURL": "https://i.ibb.co/KK6db7v/94.jpg",
     "Name": "User Login SQL Injection",
     "Times": 2,
     "TT": 0,
-    "Defence": "ORM, Prepared Statements, Input Validation and Sanitization, Input and Output Encoding"
+    "Defence": "ORM,Prepared Statements,Input Validation and Sanitization,Input and Output Encoding"
   },
   {
     "ImageURL": "https://i.ibb.co/BrN4XxL/95.jpg",
     "Name": "Search Query SQL Injection",
     "Times": 2,
     "TT": 0,
-    "Defence": "ORM, Prepared Statements, Input Validation and Sanitization, Input and Output Encoding"
+    "Defence": "ORM,Prepared Statements,Input Validation and Sanitization,Input and Output Encoding"
   },
   {
     "ImageURL": "https://i.ibb.co/2s81bS3/96.jpg",
     "Name": "E-commerce Product Injection",
     "Times": 3,
     "TT": 0,
-    "Defence": "ORM, Prepared Statements, Input Validation and Sanitization, Input and Output Encoding"
+    "Defence": "ORM,Prepared Statements,Input Validation and Sanitization,Input and Output Encoding"
   },
   {
     "ImageURL": "https://i.ibb.co/LJCGBct/97.jpg",
     "Name": "SQL Injection on Admin Panel",
     "Times": 6,
     "TT": 0,
-    "Defence": "ORM, Prepared Statements, Input Validation and Sanitization, Input and Output Encoding"
+    "Defence": "ORM,Prepared Statements,Input Validation and Sanitization,Input and Output Encoding"
   },
   {
     "ImageURL": "https://i.ibb.co/DKzJrhg/98.jpg",
     "Name": "Customer Data Breach via SQL Injection",
     "Times": 1,
     "TT": 0,
-    "Defence": "ORM, Prepared Statements, Input Validation and Sanitization, Input and Output Encoding"
+    "Defence": "ORM,Prepared Statements,Input Validation and Sanitization,Input and Output Encoding"
   },
   {
     "ImageURL": "https://i.ibb.co/kqzCqL5/99.jpg",
     "Name": "Financial System SQL Injection",
     "Times": 2,
     "TT": 0,
-    "Defence": "ORM, Prepared Statements, Input Validation and Sanitization, Input and Output Encoding"
+    "Defence": "ORM,Prepared Statements,Input Validation and Sanitization,Input and Output Encoding"
   },
   {
     "ImageURL": "https://i.ibb.co/b1r1cQ4/100.jpg",
     "Name": "Inventory Manipulation via SQL Injection",
     "Times": 1,
     "TT": 0,
-    "Defence": "ORM, Prepared Statements, Input Validation and Sanitization, Input and Output Encoding"
+    "Defence": "ORM,Prepared Statements,Input Validation and Sanitization,Input and Output Encoding"
   },
   {
     "ImageURL": "https://i.ibb.co/mRL6bcs/101.jpg",
     "Name": "SQL Injection on Public Forum",
     "Times": 2,
     "TT": 0,
-    "Defence": "ORM, Prepared Statements, Input Validation and Sanitization, Input and Output Encoding"
+    "Defence": "ORM,Prepared Statements,Input Validation and Sanitization,Input and Output Encoding"
   },
   {
     "ImageURL": "https://i.ibb.co/KKb0Hqv/102.jpg",
     "Name": "Employee Portal SQL Injection",
     "Times": 2,
     "TT": 0,
-    "Defence": "ORM, Prepared Statements, Input Validation and Sanitization, Input and Output Encoding"
+    "Defence": "ORM,Prepared Statements,Input Validation and Sanitization,Input and Output Encoding"
   },
   {
     "ImageURL": "https://i.ibb.co/cr8MPb2/103.jpg",
     "Name": "SQL Injection on Cloud Service",
     "Times": 1,
     "TT": 0,
-    "Defence": "ORM, Prepared Statements, Input Validation and Sanitization, Input and Output Encoding"
+    "Defence": "ORM,Prepared Statements,Input Validation and Sanitization,Input and Output Encoding"
   },
   {
     "ImageURL": "https://i.ibb.co/vhXzpKJ/104.jpg",
     "Name": "Wi-Fi Eavesdropping",
     "Times": 0,
     "TT": 0,
-    "Defence": "VPN, DNSSEC, MFA"
+    "Defence": "VPN,DNSSEC,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/YZD6NsD/105.jpg",
     "Name": "Email Hijacking",
     "Times": 3,
     "TT": 1,
-    "Defence": "VPN, DNSSEC, MFA"
+    "Defence": "VPN,DNSSEC,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/TMY13pF/106.jpg",
     "Name": "Secure Messaging Intercept",
     "Times": 1,
     "TT": 0,
-    "Defence": "VPN, DNSSEC, MFA"
+    "Defence": "VPN,DNSSEC,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/7VxpYQ1/107.jpg",
     "Name": "Session Hijacking via MiTM",
     "Times": 1,
     "TT": 0,
-    "Defence": "VPN, DNSSEC, MFA"
+    "Defence": "VPN,DNSSEC,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/TkHsGrf/108.jpg",
     "Name": "DNS Spoofing and MiTM",
     "Times": 0,
     "TT": 0,
-    "Defence": "VPN, DNSSEC, MFA"
+    "Defence": "VPN,DNSSEC,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/rvp8Fnc/109.jpg",
     "Name": "SSL Strip Attack",
     "Times": 3,
     "TT": 0,
-    "Defence": "VPN, DNSSEC, MFA"
+    "Defence": "VPN,DNSSEC,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/0sTFJJ9/110.jpg",
     "Name": "Mass Account Compromise",
     "Times": 0,
     "TT": 0,
-    "Defence": "MFA, Regular password changes"
+    "Defence": "MFA,Regular password changes"
   },
   {
     "ImageURL": "https://i.ibb.co/PzD0mMh/111.jpg",
     "Name": "High-Value Target Breach",
     "Times": 5,
     "TT": 0,
-    "Defence": "MFA, Regular password changes"
+    "Defence": "MFA,Regular password changes"
   },
   {
     "ImageURL": "https://i.ibb.co/QfQVDBx/112.jpg",
     "Name": "E-commerce Credential Stuffing",
     "Times": 3,
     "TT": 0,
-    "Defence": "MFA, Regular password changes"
+    "Defence": "MFA,Regular password changes"
   },
   {
     "ImageURL": "https://i.ibb.co/9GV7CBn/113.jpg",
     "Name": "Banking System Compromise",
     "Times": 2,
     "TT": 0,
-    "Defence": "MFA, Regular password changes"
+    "Defence": "MFA,Regular password changes"
   },
   {
     "ImageURL": "https://i.ibb.co/DGJssNk/114.jpg",
     "Name": "Social Media Takeover",
     "Times": 0,
     "TT": 0,
-    "Defence": "MFA, Regular password changes"
+    "Defence": "MFA,Regular password changes"
   },
   {
     "ImageURL": "https://i.ibb.co/fdfPk1W/115.jpg",
     "Name": "Corporate Email Breach",
     "Times": 3,
     "TT": 0,
-    "Defence": "MFA, Regular password changes"
+    "Defence": "MFA,Regular password changes"
   },
   {
     "ImageURL": "https://i.ibb.co/vhJ57Zs/116.jpg",
     "Name": "Infected Ad Network",
     "Times": 6,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/WgCgPwk/117.jpg",
     "Name": "Compromised News Website",
     "Times": 2,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/xSws7ns/118.jpg",
     "Name": "Malware-Laden Pop-Up",
     "Times": 0,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/dpQW4tc/119.jpg",
     "Name": "Hijacked Social Media Link",
     "Times": 0,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/s9LSyXv/120.jpg",
     "Name": "Compromised Browser Extension",
     "Times": 1,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/NsSWgRK/121.jpg",
     "Name": "Infected Email Link",
     "Times": 5,
     "TT": 1,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/Rjzs69d/122.jpg",
     "Name": "Exploit on Download Site",
     "Times": 3,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/qg1hy7h/123.jpg",
     "Name": "Malicious Drive-by via Flash",
     "Times": 0,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/8bDcp63/124.jpg",
     "Name": "Drive-by on Free Streaming Site",
     "Times": 3,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/74KG1kd/125.jpg",
     "Name": "Compromised Gaming Forum",
     "Times": 2,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/MRfLWmF/126.jpg",
     "Name": "Trojan Horse Attack",
     "Times": 0,
     "TT": 0,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/VvDB9D2/127.jpg",
     "Name": "Ransomware Infection",
     "Times": 8,
     "TT": 1,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/s2Ds4sh/128.jpg",
     "Name": "Worm Propagation",
     "Times": 6,
     "TT": 1,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/18gSjh4/129.jpg",
     "Name": "Spyware Installation",
     "Times": 5,
     "TT": 1,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/S5YtKSR/130.jpg",
     "Name": "Adware Invasion",
     "Times": 5,
     "TT": 1,
-    "Defence": "Anti-Malware Version, Firewall, Knowledge Level, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Knowledge Level,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/0BYQRtc/131.jpg",
     "Name": "Rootkit Injection",
     "Times": 3,
     "TT": 1,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/hVRf1m9/132.jpg",
     "Name": "Keylogger Deployment",
     "Times": 6,
     "TT": 1,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/CsFjN3m/133.jpg",
     "Name": "Backdoor Creation",
     "Times": 4,
     "TT": 1,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/47N1KqV/134.jpg",
     "Name": "Botnet Recruitment",
     "Times": 5,
     "TT": 1,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/0rqJFhC/135.jpg",
     "Name": "Fileless Malware",
     "Times": 4,
     "TT": 1,
-    "Defence": "Anti-Malware Version, Firewall, Data Backup"
+    "Defence": "Anti-Malware Version,Firewall,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/KsPNrZn/136.jpg",
     "Name": "System Hijack Exploit",
     "Times": 3,
     "TT": 0,
-    "Defence": "IDS/IPS, OS Version, Network Segmentation, Data Backup"
+    "Defence": "IDS/IPS,OS Version,Network Segmentation,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/KsGzfmY/137.jpg",
     "Name": "Browser Vulnerability Exploit",
     "Times": 6,
     "TT": 0,
-    "Defence": "IDS/IPS, OS Version, Network Segmentation, Data Backup"
+    "Defence": "IDS/IPS,OS Version,Network Segmentation,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/bgK0xx9/138.jpg",
     "Name": "Unpatched Software Exploit",
     "Times": 2,
     "TT": 0,
-    "Defence": "IDS/IPS, OS Version, Network Segmentation, Data Backup"
+    "Defence": "IDS/IPS,OS Version,Network Segmentation,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/YTYDVxk/139.jpg",
     "Name": "Cloud Service Exploit",
     "Times": 5,
     "TT": 1,
-    "Defence": "IDS/IPS, OS Version, Network Segmentation, Data Backup"
+    "Defence": "IDS/IPS,OS Version,Network Segmentation,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/7NBBdGs/140.jpg",
     "Name": "Mobile OS Zero-Day",
     "Times": 4,
     "TT": 0,
-    "Defence": "IDS/IPS, OS Version, Network Segmentation, Data Backup"
+    "Defence": "IDS/IPS,OS Version,Network Segmentation,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/Qky3d87/141.jpg",
     "Name": "IoT Device Exploit",
     "Times": 2,
     "TT": 0,
-    "Defence": "IDS/IPS, OS Version, Network Segmentation, Data Backup"
+    "Defence": "IDS/IPS,OS Version,Network Segmentation,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/YXX5Thv/142.jpg",
     "Name": "Database Exploit",
     "Times": 3,
     "TT": 0,
-    "Defence": "IDS/IPS, OS Version, Network Segmentation, Data Backup"
+    "Defence": "IDS/IPS,OS Version,Network Segmentation,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/zsMXLr5/143.jpg",
     "Name": "Critical Infrastructure Exploit",
     "Times": 4,
     "TT": 0,
-    "Defence": "IDS/IPS, OS Version, Network Segmentation, Data Backup"
+    "Defence": "IDS/IPS,OS Version,Network Segmentation,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/k1SKhn1/144.jpg",
     "Name": "Remote Desktop Exploit",
     "Times": 4,
     "TT": 0,
-    "Defence": "IDS/IPS, OS Version, Network Segmentation, Data Backup"
+    "Defence": "IDS/IPS,OS Version,Network Segmentation,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/8rfhmS1/145.jpg",
     "Name": "Zero-Day in Communication App",
     "Times": 6,
     "TT": 0,
-    "Defence": "IDS/IPS, OS Version, Network Segmentation, Data Backup"
+    "Defence": "IDS/IPS,OS Version,Network Segmentation,Data Backup"
   },
   {
     "ImageURL": "https://i.ibb.co/7y6ShHL/146.jpg",
     "Name": "Weak Password Attack",
     "Times": 6,
     "TT": 0,
-    "Defence": "Strong Password, Account Lockout, MFA"
+    "Defence": "Strong Password,Account Lockout,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/MpRWpxS/147.jpg",
     "Name": "Enterprise Account Breach",
     "Times": 7,
     "TT": 0,
-    "Defence": "Strong Password, Account Lockout, MFA"
+    "Defence": "Strong Password,Account Lockout,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/4sgmBwS/148.jpg",
     "Name": "Remote Access via Password Spraying",
     "Times": 3,
     "TT": 0,
-    "Defence": "Strong Password, Account Lockout, MFA"
+    "Defence": "Strong Password,Account Lockout,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/0thFtPY/149.jpg",
     "Name": "Cloud Service Breach",
     "Times": 5,
     "TT": 0,
-    "Defence": "Strong Password, Account Lockout, MFA"
+    "Defence": "Strong Password,Account Lockout,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/Z660kwb/150.jpg",
     "Name": "Financial Account Takeover",
     "Times": 3,
     "TT": 0,
-    "Defence": "Strong Password, Account Lockout, MFA"
+    "Defence": "Strong Password,Account Lockout,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/VVD34kS/151.jpg",
     "Name": "Social Media Account Hijacking",
     "Times": 8,
     "TT": 0,
-    "Defence": "Strong Password, Account Lockout, MFA"
+    "Defence": "Strong Password,Account Lockout,MFA"
   },
   {
     "ImageURL": "https://i.ibb.co/HG58H9k/152.jpg",
     "Name": "Unauthorized Cloud Storage",
     "Times": 4,
     "TT": 0,
-    "Defence": "Establish Clear IT Policies, Access Control Monitoring"
+    "Defence": "Establish Clear IT Policies,Access Control Monitoring"
   },
   {
     "ImageURL": "https://i.ibb.co/nPG0ztk/153.jpg",
     "Name": "Unapproved Messaging App",
     "Times": 3,
     "TT": 0,
-    "Defence": "Establish Clear IT Policies, Access Control Monitoring"
+    "Defence": "Establish Clear IT Policies,Access Control Monitoring"
   },
   {
     "ImageURL": "https://i.ibb.co/2W59M8X/154.jpg",
     "Name": "Shadow Database",
     "Times": 5,
     "TT": 0,
-    "Defence": "Establish Clear IT Policies, Access Control Monitoring"
+    "Defence": "Establish Clear IT Policies,Access Control Monitoring"
   },
   {
     "ImageURL": "https://i.ibb.co/cFwQ8qL/155.jpg",
     "Name": "Unknown Software Installation",
     "Times": 3,
     "TT": 0,
-    "Defence": "Establish Clear IT Policies, Access Control Monitoring"
+    "Defence": "Establish Clear IT Policies,Access Control Monitoring"
   },
   {
     "ImageURL": "https://i.ibb.co/Rvq2Svn/156.jpg",
     "Name": "Personal Email for Work",
     "Times": 4,
     "TT": 0,
-    "Defence": "Establish Clear IT Policies, Access Control Monitoring"
+    "Defence": "Establish Clear IT Policies,Access Control Monitoring"
   },
   {
     "ImageURL": "https://i.ibb.co/JpmZ8tY/157.jpg",
     "Name": "Unlicensed File Sharing",
     "Times": 4,
     "TT": 0,
-    "Defence": "Establish Clear IT Policies, Access Control Monitoring"
+    "Defence": "Establish Clear IT Policies,Access Control Monitoring"
   },
   {
     "ImageURL": "https://i.ibb.co/6R66bWY/158.jpg",
     "Name": "External Collaboration Tools",
     "Times": 4,
     "TT": 0,
-    "Defence": "Establish Clear IT Policies, Access Control Monitoring"
+    "Defence": "Establish Clear IT Policies,Access Control Monitoring"
   },
   {
     "ImageURL": "https://i.ibb.co/j4DH9H4/159.jpg",
     "Name": "Unmonitored IoT Devices",
     "Times": 3,
     "TT": 0,
-    "Defence": "Establish Clear IT Policies, Access Control Monitoring"
+    "Defence": "Establish Clear IT Policies,Access Control Monitoring"
   },
   {
     "ImageURL": "https://i.ibb.co/phCjXBj/160.jpg",
     "Name": "Non-compliant Backup Systems",
     "Times": 0,
     "TT": 0,
-    "Defence": "Establish Clear IT Policies, Access Control Monitoring"
+    "Defence": "Establish Clear IT Policies,Access Control Monitoring"
   },
   {
     "ImageURL": "https://i.ibb.co/jZjPkTR/161.jpg",
     "Name": "Unapproved VPN Service",
     "Times": 0,
     "TT": 0,
-    "Defence": "Establish Clear IT Policies, Access Control Monitoring"
+    "Defence": "Establish Clear IT Policies,Access Control Monitoring"
   }
 ]

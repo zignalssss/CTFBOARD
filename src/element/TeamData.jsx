@@ -22,7 +22,8 @@ function TeamData(props) {
     //     true,true,true,true,true,
     //     true,true,true,true,true,
     //     ])
-    const check_Protenct =  ["MFA",
+    const check_Protenct =  [
+    "MFA",
     "Strong Password",
     "Data Backup",
     "IDS/IPS",
@@ -91,7 +92,6 @@ function TeamData(props) {
 
             // if(card['Times']+card['start-turn'] > props.thisTurn)
             // {
-                if(card['TT'] === 1){
                     console.log('true')
                     let s = false;
                     checkStatus.map((elemet,i) => {
@@ -109,7 +109,7 @@ function TeamData(props) {
                         handleDelete(card);
 
                     }
-                }
+                
             // }
         })
     
@@ -171,10 +171,13 @@ function TeamData(props) {
             <div className='row-span-3 flex items-center flex-col'>
                 {/* Card with dynamic URL and status */}
                 {!status && 
-                    <Card url={url_image} state={false} w={160} />
+                    <Card url={url_image} state={false} w={180} />
                 }
                 {teamStack.length > 0 && 
-                    <Card url={url_image} state={true} w={160} />
+                    <Card url={url_image} state={true} w={180} /> 
+                }
+                {teamStack.length > 0 && 
+                    <div>{teamStack[teamStack.length - 1]['Defence']}</div>
                 }
                 {teamStack.length > 0 && 
                     

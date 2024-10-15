@@ -35,7 +35,30 @@ function App() {
     {"MITM_Attack":"Encryption, VPN, SID Regeneration, Strict Session, Session Timeout"},
     {"Malware":"Anti-Malware Version, Firewall, Data Backup"}
     ,{"Zero_Day_Exploit":"IDS/IPS, OS Version, Network Segmentation, Data Backup"}]
-
+    const check_Protenct =  [
+      "MFA",
+      "Strong Password",
+      "Data Backup",
+      "IDS/IPS",
+      "Account Lockout",
+      "VPN",
+      "Secure DNS",
+      "DNSSEC",
+      "Input and Output Encoding",
+      "CSP",
+      "DNS Filtering",
+      "ORM",
+      "Prepared Statements",
+      "Access Control Monitoring",
+      "Least Privilege",
+      "SID Regeneration",
+      "Session Timeout",
+      "Encryption",
+      "Strict Session",
+      "Regular password changes",
+      "Input Validation and Sanitization" ,
+      "Firewall",
+      "Establish Clear IT Policies"]
   useEffect(() => {
     fetchJSONData();
   }, []);
@@ -176,14 +199,17 @@ const deleteCardFromTeam = (teamNumber, cardToDelete) => {
   return (
     <div className="h-dvh grid grid-rows-[40%_60%] p-3">
       <div className='grid grid-cols-7  gap-5 py-5 px-40 h-full '>
-          <div className="flex justify-center col-span-4  border-2 border-black">
+          <div className="flex justify-center col-span-2  border-2 border-black">
             <div className="grid grid-cols-3 items-center gap-5 px-5 ">
-              <div className='flex items-center col-span-1 flex-col '>
+              <div className='flex items-center col-span-2 flex-col '>
               {!status && 
                     <Card url={urlImage} state={false} w={160} />
                 }
                 {centerCard.length > 0 && 
                     <Card url={urlImage} state={true} w={160} />
+                }
+                 {centerCard.length > 0 && 
+                    <div>{centerCard[centerCard.length - 1]['Defence']}</div>
                 }
                 {(centerCard.length > 0) && 
                   // <button className=''>X</button>
@@ -193,9 +219,7 @@ const deleteCardFromTeam = (teamNumber, cardToDelete) => {
                   }}>X</button>
                 }
               </div>
-              <div className=' grid grid-cols-5 col-span-2 gap-4'>
-                {listItems}
-              </div>
+              <dic className='col-span-1'>{centerStack.length}</dic>
             </div>
           </div>
           <div className="flex justify-center col-span-2 gap-5 h-full">
@@ -204,6 +228,13 @@ const deleteCardFromTeam = (teamNumber, cardToDelete) => {
               <TeamManager/>
             </div>
           </div>
+          <div className='col-span-2 grid grid-cols-2'>
+                {check_Protenct.map((element,index) => (
+                  <div>{index+1} : {element}</div>
+                ))};
+              
+          </div>
+
           <div className="grid grid-rows-2  col-span-1 gap-5 h-full">
             <h1 className='text-2xl'>Turn Now : {turn}</h1>
             <button className='bg-green-200' onClick={()=>{setTurn(turn+1)}}>Next Turn</button>
