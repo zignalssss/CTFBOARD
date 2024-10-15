@@ -29,6 +29,13 @@ function App() {
   const [urlImage,setUrlImage] = useState('');
   const sleep = ms => new Promise(r => setTimeout(r, ms));
 
+  const ransomware_type = [{"Password Spraying":"Strong Password, Account Lockout, MFA"},
+    {"Privilege Escalation":"OS Version, MFA, Least Privilege, Access Control Monitoring"},
+    {"Phishing or Social_Engineering":"Knowledge Level"},
+    {"MITM_Attack":"Encryption, VPN, SID Regeneration, Strict Session, Session Timeout"},
+    {"Malware":"Anti-Malware Version, Firewall, Data Backup"}
+    ,{"Zero_Day_Exploit":"IDS/IPS, OS Version, Network Segmentation, Data Backup"}]
+
   useEffect(() => {
     fetchJSONData();
   }, []);
@@ -53,13 +60,22 @@ function App() {
     //console.log(allCard.length)
     index = Math.floor(Math.random() * maxCard);
     const tmp = allCard[index]
+    if(tmp['Times'] === -1){
+      let i = Math.floor(Math.random() * 5);
+      let valus = Object.values(ransomware_type);
+      let keys = Object.keys(ransomware_type);
+      tmp['Defence'] = valus[i];
+      let t = Math.floor(Math.random*7) + 1;
+      tmp['Times'] = t;
+    }
     setMaxCard(maxCard => maxCard-1);
     //console.log(maxCard)
+    tmp['start-turn'] = turn;
     const newCard = [...allCard];
     newCard.splice(index,1);
     setAllCard(newCard);
     //console.log(allCard.length)
-    //console.log(tmp);
+    console.log(tmp);
     return tmp;
   }
 
@@ -74,6 +90,7 @@ function App() {
       setMaxCard(159);
     }
     teamStateArray.forEach((setTeamState) => {
+      
       setTeamState(prevState => [...prevState, ranCard()]); // Appends ranCard to the current array state
     });
     teamVarStateArray.forEach((state, index) => {
@@ -90,7 +107,7 @@ function App() {
       console.log(team4Stack);
 
   useEffect(()=>{
-    const newTeamStack = centerStack.filter((element,index) => (turn === element['Times']));
+    const newTeamStack = centerStack.filter((element,index) => (turn === element['Times']+element['start-turn']));
         if (newTeamStack.length > 0) {
             console.log("Center ||")
             console.log(newTeamStack)

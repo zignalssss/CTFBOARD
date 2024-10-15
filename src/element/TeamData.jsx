@@ -16,6 +16,12 @@ function TeamData(props) {
                                                     false,false,false,false,false,
                                                     false,false,false
                                                     ])
+    // const [checkStatus,setCheckStatus] = useState([true,true,true,true,true,
+    //     true,true,true,true,true,
+    //     true,true,true,true,true,
+    //     true,true,true,true,true,
+    //     true,true,true,true,true,
+    //     ])
     const check_Protenct =  ["MFA",
     "Strong Password",
     "Data Backup",
@@ -47,7 +53,7 @@ function TeamData(props) {
     // Update teamStack when thisTurn changes
     useEffect(() => {
         setCountCard(props.teamCard.length);
-        const newTeamStack = props.teamCard.filter((element) => props.thisTurn === element['Times']);
+        const newTeamStack = props.teamCard.filter((element) => props.thisTurn === element['Times']+element['start-turn']);
         if (newTeamStack.length > 0) {
             setTeamStack(prevStack => [...prevStack, ...newTeamStack]);
         }
@@ -77,20 +83,40 @@ function TeamData(props) {
     }, [teamStack]);
 
 
-    props.teamCard.map((card,index) => {
-        if(card['Times'] > props.thisTurn)
-        {
-            if(card['TT'] === 1){
-                // console.log('true')
-                checkStatus.map((elemet,i) => {
-                    if(elemet && card['Defence'].includes(check_Protenct[i])){
-                        console.log(check_Protenct[i]);
-                    }
-                })
-            }
-        }
-    })
+    useEffect(() => {
+   
+        props.teamCard.map((card,index) => {
+  
 
+
+            // if(card['Times']+card['start-turn'] > props.thisTurn)
+            // {
+                if(card['TT'] === 1){
+                    console.log('true')
+                    let s = false;
+                    checkStatus.map((elemet,i) => {
+                        if(elemet && card['Defence'].includes(check_Protenct[i])){
+                            s = true;
+                            // setTeamStack(prevStack => [...prevStack, ...card]);
+                            
+    
+                        }
+                        
+                    })
+                    if(s) {
+                        alert(`Protect Sucessfully! ${card['Name']} ${props.number}`)
+                        setTeamStack(prevStack => [...prevStack, card]);
+                        handleDelete(card);
+
+                    }
+                }
+            // }
+        })
+    
+
+    },[props.thisTurn]);
+
+    
 
     function test(index)
     {
@@ -141,7 +167,7 @@ function TeamData(props) {
     };
 
     return (
-        <div className='grid grid-rows-6 gap-2 bg-red-100'>
+        <div className='grid grid-rows-6 gap-2'>
             <div className='row-span-3 flex items-center flex-col'>
                 {/* Card with dynamic URL and status */}
                 {!status && 
@@ -165,10 +191,10 @@ function TeamData(props) {
 
             {/* Grid displaying all team cards */}
             <div className='grid grid-cols-4 row-span-2 gap-1 p-1 border-2 border-black w-full'>
-                <div className='col-span-1 bg-blue-100 flex items-center'>
+                <div className='col-span-1  flex items-center'>
                     <h1 >{countCard}</h1>
                 </div>
-                <div className='bg-green-100 col-span-3 grid grid-cols-5'>
+                <div className=' col-span-3 grid grid-cols-5'>
                     {
                         check_Protenct.map((element, index) => (
                             <div className='grid grid-cols-2'>
