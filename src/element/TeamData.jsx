@@ -46,11 +46,22 @@ function TeamData(props) {
 
     // Update teamStack when thisTurn changes
     useEffect(() => {
+        setCountCard(props.teamCard.length);
         const newTeamStack = props.teamCard.filter((element) => props.thisTurn === element['Times']);
         if (newTeamStack.length > 0) {
             setTeamStack(prevStack => [...prevStack, ...newTeamStack]);
         }
     }, [props.thisTurn, props.teamCard]);
+
+    const handleDelete = (cardToDelete) => {
+        // Remove the card locally
+        setTeamStack(prevStack => prevStack.filter(card => card !== cardToDelete));
+    
+        // Notify the parent to delete the card globally
+        props.deleteCard(props.number, cardToDelete);
+      };
+    console.log(`Team:${props.number}}Card Activate Here!:`);
+    console.log(teamStack);
 
     // Handle changes to teamStack and update url_image and status accordingly
     useEffect(() => {
@@ -60,7 +71,7 @@ function TeamData(props) {
         } else {
             setStatus(true);
             console.log(teamStack[teamStack.length - 1]['ImageURL']);
-            setCountCard(countCard+1);
+            //setCountCard(props.teamCard.length);
             setUrlImage(teamStack[teamStack.length - 1]['ImageURL']);
         }
     }, [teamStack]);
@@ -142,8 +153,12 @@ function TeamData(props) {
                 {teamStack.length > 0 && 
                     
                     <button className='' onClick={() => {
-                        console.log(teamStack.length);
-                        setTeamStack(prevStack => prevStack.slice(0, -1));  // Remove the last element
+                        if (teamStack.length > 0) {
+                            const lastCard = teamStack[teamStack.length - 1];  // Get the last card to delete
+                            setTeamStack(prevStack => prevStack.slice(0, -1));  // Remove the last element
+                            handleDelete(lastCard);  // Notify the parent component
+                            setCountCard(props.teamCard.length);
+                          }
                     }}>X</button>
                 }
             </div>
@@ -151,7 +166,7 @@ function TeamData(props) {
             {/* Grid displaying all team cards */}
             <div className='grid grid-cols-4 row-span-2 gap-1 p-1 border-2 border-black w-full'>
                 <div className='col-span-1 bg-blue-100 flex items-center'>
-                    <h1 >{Math.max(props.teamCard.length - countCard,0)}</h1>
+                    <h1 >{countCard}</h1>
                 </div>
                 <div className='bg-green-100 col-span-3 grid grid-cols-5'>
                     {

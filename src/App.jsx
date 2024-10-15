@@ -9,11 +9,14 @@ import { data } from 'autoprefixer';
 function App() {
   const [count, setCount] = useState(0)
   const [centerStack,setCenterStack] = useState([])
+  const [centerCard,setCenterCard] = useState([])
   const [team1Stack,setTeam1Stack] = useState([])
   const [team2Stack,setTeam2Stack] = useState([])
   const [team3Stack,setTeam3Stack] = useState([])
   const [team4Stack,setTeam4Stack] = useState([])
   const [team5Stack,setTeam5Stack] = useState([])
+  const teamStateArray = [setCenterStack,setTeam1Stack,setTeam2Stack,setTeam3Stack,setTeam4Stack,setTeam5Stack];
+  const teamVarStateArray = [centerStack,team1Stack,team2Stack,team3Stack,team4Stack,team5Stack];
   const [turn,setTurn] = useState(0)
   const [team1Data,setDataTeam1] = useState({knowledge:0,anti:'',os:''})
   const [team2Data,setDataTeam2] = useState({knowledge:0,anti:'',os:''})
@@ -22,6 +25,8 @@ function App() {
   const [team5Data,setDataTeam5] = useState({knowledge:0,anti:'',os:''})
   const [allCard,setAllCard] = useState([])
   const [maxCard,setMaxCard] = useState(159);
+  const [status,setStatus] = useState(false);
+  const [urlImage,setUrlImage] = useState('');
   const sleep = ms => new Promise(r => setTimeout(r, ms));
 
   useEffect(() => {
@@ -45,35 +50,96 @@ function App() {
 
   function ranCard(){
     let index;
-    console.log(allCard.length)
+    //console.log(allCard.length)
     index = Math.floor(Math.random() * maxCard);
     const tmp = allCard[index]
     setMaxCard(maxCard => maxCard-1);
-    console.log(maxCard)
+    //console.log(maxCard)
     const newCard = [...allCard];
     newCard.splice(index,1);
     setAllCard(newCard);
-    console.log(allCard.length)
-    console.log(tmp);
-      
+    //console.log(allCard.length)
+    //console.log(tmp);
+    return tmp;
   }
 
   useEffect(() => {
-    console.log(turn);
+    // console.log(turn);
     if(turn == 0) return;
-    setMaxCard(maxCard => maxCard-1);
-    console.log(maxCard); return;
+    // setMaxCard(maxCard => maxCard-1);
+    //console.log(maxCard); return;
     if(maxCard <= 10)
     {
       fetchJSONData();
       setMaxCard(159);
     }
-    
-        for(let i = 0 ; i < 6 ; i++){
-          ranCard();
-        }
+    teamStateArray.forEach((setTeamState) => {
+      setTeamState(prevState => [...prevState, ranCard()]); // Appends ranCard to the current array state
+    });
+    teamVarStateArray.forEach((state, index) => {
+      console.log(`State of team ${index}:`, state);
+    });
+    // for(let i = 0 ; i < 6 ; i++){console.log(ranCard());}
+    // teamVarStateArray.forEach((a) => {
+    //   console.log(a); // This will log each team's stack
+
       
   },[turn]);
+
+      console.log("THIS IS TEAM4STACK")
+      console.log(team4Stack);
+
+  useEffect(()=>{
+    const newTeamStack = centerStack.filter((element,index) => (turn === element['Times']));
+        if (newTeamStack.length > 0) {
+            console.log("Center ||")
+            console.log(newTeamStack)
+            setCenterCard(prevStack => [...prevStack, ...newTeamStack]);
+        }
+  },[turn])
+
+  useEffect(() => {
+    if (centerCard.length === 0) {
+        setStatus(false);
+        setUrlImage("");
+    } else {
+        setStatus(true);
+        console.log("Center")
+        
+        console.log(centerCard[centerCard.length - 1]['ImageURL']);
+        // setCountCard(countCard+1);
+        setUrlImage(centerCard[centerCard.length - 1]['ImageURL']);
+    }
+}, [centerCard]);
+
+//useEffect(() => {
+    // console.log("TEAM1:")
+    // console.log(team1Stack)
+    // console.log("TEAM2:")
+    // console.log(team2Stack)
+    // console.log("TEAM3:")
+    // console.log(team3Stack)
+    // console.log("TEAM4:")
+    // console.log(team4Stack)
+    // console.log("TEAM5:")
+    // console.log(team5Stack)
+//}, [team1Stack,team2Stack,team3Stack,team4Stack,team5Stack]);
+console.log("FOR TEAM1:")
+console.log(team1Stack)
+
+const deleteCardFromTeam = (teamNumber, cardToDelete) => {
+  if (teamNumber === 1) {
+    setTeam1Stack(prevStack => prevStack.filter(card => card !== cardToDelete));
+  } else if (teamNumber === 2) {
+    setTeam2Stack(prevStack => prevStack.filter(card => card !== cardToDelete));
+  } else if (teamNumber === 3) {
+    setTeam3Stack(prevStack => prevStack.filter(card => card !== cardToDelete));
+  } else if (teamNumber === 4) {
+    setTeam4Stack(prevStack => prevStack.filter(card => card !== cardToDelete));
+  } else if (teamNumber === 5) {
+    setTeam5Stack(prevStack => prevStack.filter(card => card !== cardToDelete));
+  }
+};
 
   const test = [  {
     "ImageURL": "https://i.ibb.co/xF4pkgW/42.jpg",
@@ -87,18 +153,27 @@ function App() {
   const numbers = [1,2,3,4,5,6,7,8];
   const listItems = numbers.map(() =>
     // <img className="rounded-md" src='https://i.ibb.co/hVRf1m9/132.jpg' width={150}></img>
-    <Card url="fd" state = {false} w={80}/>
+    <Card url="fa" state = {false} w={80}/>
   );
-
+  console.log(centerStack);
   return (
     <div className="h-dvh grid grid-rows-[40%_60%] p-3">
       <div className='grid grid-cols-7  gap-5 py-5 px-40 h-full '>
           <div className="flex justify-center col-span-4  border-2 border-black">
             <div className="grid grid-cols-3 items-center gap-5 px-5 ">
               <div className='flex items-center col-span-1 flex-col '>
-                <Card url="fd" state = {false} w = {160}/>
-                {(centerStack.length > 0) && 
-                  <button className=''>X</button>
+              {!status && 
+                    <Card url={urlImage} state={false} w={160} />
+                }
+                {centerCard.length > 0 && 
+                    <Card url={urlImage} state={true} w={160} />
+                }
+                {(centerCard.length > 0) && 
+                  // <button className=''>X</button>
+                  <button className='' onClick={() => {
+                    console.log(centerCard.length);
+                    setCenterCard(prevStack => prevStack.slice(0, -1));  // Remove the last element
+                  }}>X</button>
                 }
               </div>
               <div className=' grid grid-cols-5 col-span-2 gap-4'>
@@ -119,11 +194,12 @@ function App() {
       </div>
       <div className='h-full grid grid-cols-5 gap-10 px-10'>
 
-        <Team number={1} teamCard={test} thisTurn={turn}/>
-        <Team number={2} teamCard={[]}  thisTurn={turn}/>
-        <Team number={3} teamCard={[]}  thisTurn={turn}/>
-        <Team number={4} teamCard={[]}  thisTurn={turn}/>
-        <Team number={5} teamCard={[]}  thisTurn={turn}/>
+      <Team number={1} teamCard={team1Stack} thisTurn={turn} deleteCard={deleteCardFromTeam} />
+      <Team number={2} teamCard={team2Stack} thisTurn={turn} deleteCard={deleteCardFromTeam} />
+      <Team number={3} teamCard={team3Stack} thisTurn={turn} deleteCard={deleteCardFromTeam} />
+      <Team number={4} teamCard={team4Stack} thisTurn={turn} deleteCard={deleteCardFromTeam} />
+      <Team number={5} teamCard={team5Stack} thisTurn={turn} deleteCard={deleteCardFromTeam} />
+
         
       </div>
     </div> 
