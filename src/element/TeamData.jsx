@@ -4,12 +4,14 @@ import Card from './Card';
 function TeamData(props) {
     const anti_virus = ['Norton', 'Bitdefender', 'Avira Antivirus', 'McAfee'];
     const OS = ['Windows', 'Linux'];
-    const [teamData, setTeamData] = useState({ 'anti': '', 'os': '' });
+    const [teamData, setTeamData] = useState({ 'Knowledge Level':'Knowledge Level','Anti-Malware Version': '', 'OS Version': '' });
     const [level, setLevel] = useState({ 'Knowledge Level': 0, 'Anti-Malware Version': 0, 'OS Version': 0 });
     const [teamStack, setTeamStack] = useState([]);
     const [status, setStatus] = useState(false);
     const [url_image, setUrlImage] = useState("");
     const [countCard,setCountCard] = useState(0);
+    const [current,setCurrent] = useState([]);
+    const [currentCard ,setCurrentCard] = useState({});
     const [checkStatus,setCheckStatus] = useState([false,false,false,false,false,
                                                     false,false,false,false,false,
                                                     false,false,false,false,false,
@@ -67,8 +69,26 @@ function TeamData(props) {
         // Notify the parent to delete the card globally
         props.deleteCard(props.number, cardToDelete);
       };
-    console.log(`Team:${props.number}}Card Activate Here!:`);
-    console.log(teamStack);
+
+      const handleCheckLevels = (check) => {
+        console.log(check)
+        let keyCheckVersion = teamData[check]
+        if(props.levels[keyCheckVersion] <= level[check]){
+            // console.log(keyCheckVersion` level : ${props.levels[keyCheckVersion]}`)
+            console.log("You can't not Defence");
+            console.log(`${keyCheckVersion} level : ${props.levels[keyCheckVersion]}`)
+            return false;
+        }
+        else 
+        {
+            console.log("You can Defence");
+            console.log(`${keyCheckVersion} level : ${props.levels[keyCheckVersion]}`)
+            // console.log(keyCheckVersion` level : ${props.levels[keyCheckVersion]}`)
+            return true;
+        }
+      }
+    //console.log(`Team:${props.number}}Card Activate Here!:`);
+    //console.log(teamStack);
 
     // Handle changes to teamStack and update url_image and status accordingly
     useEffect(() => {
@@ -77,26 +97,83 @@ function TeamData(props) {
             setUrlImage("");
         } else {
             setStatus(true);
-            console.log(teamStack[teamStack.length - 1]['ImageURL']);
+            //console.log(teamStack[teamStack.length - 1]['ImageURL']);
             //setCountCard(props.teamCard.length);
+            setCurrent(teamStack[teamStack.length - 1]['Defence'].split(','))
+            console.log('current')
+            // setCurrentName(teamStack[teamStack.length - 1]['Name'])
+            setCurrentCard(teamStack[teamStack.length - 1])
+            // console.log(teamStack[teamStack.length - 1]['Defence'].split(','))
             setUrlImage(teamStack[teamStack.length - 1]['ImageURL']);
         }
     }, [teamStack]);
 
+    useEffect(() => {
+        let arr = Object.keys(teamData);
+        console.log(`LeveL! ${props.number}`)
+        console.log(props.teamCard)
+        arr.forEach(member => {
+            let s = false;
+            props.teamCard.map((c,i) => {
+                s = false
+                let cd = [];
+                if (typeof c["Defence"] === "string") {
+                    cd = c["Defence"].split(',');
+                } else {
+                    console.warn(`Expected string for Defence but got: ${typeof c["Defence"]}`);
+                    return; // Exit early if it's not a string
+                }
+                cd.map((element,index) => {
+                    if(element === member){
+                        // console.log(member)
+                        if(handleCheckLevels(member)){
+                            s = true;
+                        }
+                    }
+                })
+                if(s)
+                {
+                    alert(`Team : ${props.number} \n Protect This ${teamData[member]}  \n Protect Sucessfully! ${c['Name']} \n Protect By ${member} LeveL : ${level[member]} `)
+
+                    // setTeamStack(prevStack => [...prevStack, c]);
+                    handleDelete(c);
+                    // console.log(current)
+                }
+            })
+        })
+        
+    },[props.teamCard])
 
     useEffect(() => {
-   
+        let s = false;
+        console.log(`Check Protect ${props.number}`)
+        // console.log(props.number)
+        console.log(props.teamCard.length)
+        // current.forEach(element => {
+        //     checkStatus.map((member,i) => {
+        //         if(member && element === check_Protenct[i]){
+        //             s = true;
+        //         }
+                
+        //     })
+        // })
+        // if(s) {
+        //     alert(`Protect Sucessfully! ${currentCard['Name']} ${props.number}`)
+        //     setTeamStack(prevStack => [...prevStack, currentCard]);
+        //     handleDelete(currentCard);
+
+        // }
         props.teamCard.map((card,index) => {
-  
-
-
-            // if(card['Times']+card['start-turn'] > props.thisTurn)
-            // {
-                    console.log('true')
                     let s = false;
+                    console.log("IN check!!")
+                    console.log(card)
                     checkStatus.map((elemet,i) => {
+                        if(elemet){
+                            console.log(check_Protenct[i])
+                        }
                         if(elemet && card['Defence'].includes(check_Protenct[i])){
                             s = true;
+
                             // setTeamStack(prevStack => [...prevStack, ...card]);
                             
     
@@ -114,17 +191,18 @@ function TeamData(props) {
         })
     
 
-    },[props.thisTurn]);
+    },[props.teamCard]);
 
     
 
     function test(index)
     {
-        console.log(index);const tmp = [...checkStatus];
+       //console.log(index);
+        const tmp = [...checkStatus];
         tmp[index] = true;
         setCheckStatus(tmp);
-        console.log(checkStatus[index]);
-        console.log(checkStatus)
+        //console.log(checkStatus[index]);
+        //console.log(checkStatus)
     }
     // Function to handle antivirus change
     const handleAntivirusChange = (e) => {
@@ -177,7 +255,17 @@ function TeamData(props) {
                     <Card url={url_image} state={true} w={180} /> 
                 }
                 {teamStack.length > 0 && 
-                    <div>{teamStack[teamStack.length - 1]['Defence']}</div>
+                    <div>{
+                    current.map((element,index) => (
+                        <div>{element}</div>
+                    ))}
+                    </div>
+                    // typeof(current)
+                    // current.forEach(element => {
+                    //     <div>{element}</div>
+                    // })
+                    // ((teamStack[teamStack.length - 1]['Defence']).split(","))
+                
                 }
                 {teamStack.length > 0 && 
                     

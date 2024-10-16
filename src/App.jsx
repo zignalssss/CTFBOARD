@@ -15,6 +15,15 @@ function App() {
   const [team3Stack,setTeam3Stack] = useState([])
   const [team4Stack,setTeam4Stack] = useState([])
   const [team5Stack,setTeam5Stack] = useState([])
+  const [level,setLevel] = useState({})
+  const [level1,setLevel1] = useState({})
+  const [level2,setLevel2] = useState({})
+  const [level3,setLevel3] = useState({})
+  const [level4,setLevel4] = useState({})
+  const [level5,setLevel5] = useState({})
+  // const [levels,setLevels] = useState([])
+  const levels = [level,level1,level2,level3,level4,level5]
+  const setLevels = [setLevel,setLevel1,setLevel2,setLevel3,setLevel4,setLevel5]
   const teamStateArray = [setCenterStack,setTeam1Stack,setTeam2Stack,setTeam3Stack,setTeam4Stack,setTeam5Stack];
   const teamVarStateArray = [centerStack,team1Stack,team2Stack,team3Stack,team4Stack,team5Stack];
   const [turn,setTurn] = useState(0)
@@ -27,6 +36,7 @@ function App() {
   const [maxCard,setMaxCard] = useState(159);
   const [status,setStatus] = useState(false);
   const [urlImage,setUrlImage] = useState('');
+  const [maxLevels, setMaxLevels] = useState({});
   const sleep = ms => new Promise(r => setTimeout(r, ms));
 
   const ransomware_type = [{"Password Spraying":"Strong Password, Account Lockout, MFA"},
@@ -63,6 +73,7 @@ function App() {
     fetchJSONData();
   }, []);
 
+  
   function fetchJSONData() {
     fetch("/data/data.json")
         .then((res) => {
@@ -98,11 +109,29 @@ function App() {
     newCard.splice(index,1);
     setAllCard(newCard);
     //console.log(allCard.length)
-    console.log(tmp);
+    //console.log(tmp);
     return tmp;
   }
 
   useEffect(() => {
+
+
+    let tmparr = Object.keys(maxLevels);
+    let newLevels = [];
+
+    for (let i = 0; i < 6; i++) {
+        let level = {};
+        tmparr.forEach(element => {
+            level[element] = Math.floor(Math.random() * (maxLevels[element] - 1)) + 1;
+        });
+        setLevels[i](level);
+        console.log(level);
+        // newLevels.push(level); // Add the generated level object to the array
+    }
+
+    // console.log(newLevels); // Log the new levels
+    // setLevels(newLevels); 
+
     // console.log(turn);
     if(turn == 0) return;
     // setMaxCard(maxCard => maxCard-1);
@@ -116,9 +145,9 @@ function App() {
       
       setTeamState(prevState => [...prevState, ranCard()]); // Appends ranCard to the current array state
     });
-    teamVarStateArray.forEach((state, index) => {
-      console.log(`State of team ${index}:`, state);
-    });
+    // teamVarStateArray.forEach((state, index) => {
+    //   console.log(`State of team ${index}:`, state);
+    // });
     // for(let i = 0 ; i < 6 ; i++){console.log(ranCard());}
     // teamVarStateArray.forEach((a) => {
     //   console.log(a); // This will log each team's stack
@@ -126,14 +155,14 @@ function App() {
       
   },[turn]);
 
-      console.log("THIS IS TEAM4STACK")
-      console.log(team4Stack);
+      // console.log("THIS IS TEAM4STACK")
+      // console.log(team4Stack);
 
   useEffect(()=>{
     const newTeamStack = centerStack.filter((element,index) => (turn === element['Times']+element['start-turn']));
         if (newTeamStack.length > 0) {
-            console.log("Center ||")
-            console.log(newTeamStack)
+            // console.log("Center ||")
+            // console.log(newTeamStack)
             setCenterCard(prevStack => [...prevStack, ...newTeamStack]);
         }
   },[turn])
@@ -144,9 +173,9 @@ function App() {
         setUrlImage("");
     } else {
         setStatus(true);
-        console.log("Center")
+        //("Center")
         
-        console.log(centerCard[centerCard.length - 1]['ImageURL']);
+        //console.log(centerCard[centerCard.length - 1]['ImageURL']);
         // setCountCard(countCard+1);
         setUrlImage(centerCard[centerCard.length - 1]['ImageURL']);
     }
@@ -164,9 +193,16 @@ function App() {
     // console.log("TEAM5:")
     // console.log(team5Stack)
 //}, [team1Stack,team2Stack,team3Stack,team4Stack,team5Stack]);
-console.log("FOR TEAM1:")
-console.log(team1Stack)
+// console.log("FOR TEAM1:")
+// console.log(team1Stack)
 
+const updateLevels = (newLevels) => {
+  setMaxLevels(newLevels);
+};
+useEffect(()=>{
+  console.log("This is max levels")
+  console.log(maxLevels)
+},[Object.values(maxLevels)])
 const deleteCardFromTeam = (teamNumber, cardToDelete) => {
   if (teamNumber === 1) {
     setTeam1Stack(prevStack => prevStack.filter(card => card !== cardToDelete));
@@ -214,7 +250,7 @@ const deleteCardFromTeam = (teamNumber, cardToDelete) => {
                 {(centerCard.length > 0) && 
                   // <button className=''>X</button>
                   <button className='' onClick={() => {
-                    console.log(centerCard.length);
+                    //console.log(centerCard.length);
                     setCenterCard(prevStack => prevStack.slice(0, -1));  // Remove the last element
                   }}>X</button>
                 }
@@ -225,7 +261,7 @@ const deleteCardFromTeam = (teamNumber, cardToDelete) => {
           <div className="flex justify-center col-span-2 gap-5 h-full">
             <div className='w-[100%]  border-2 border-black'>
               {/* TEST */}
-              <TeamManager/>
+              <TeamManager onLevelsChange={updateLevels}/>
             </div>
           </div>
           <div className='col-span-2 grid grid-cols-2'>
@@ -242,11 +278,11 @@ const deleteCardFromTeam = (teamNumber, cardToDelete) => {
       </div>
       <div className='h-full grid grid-cols-5 gap-10 px-10'>
 
-      <Team number={1} teamCard={team1Stack} thisTurn={turn} deleteCard={deleteCardFromTeam} />
-      <Team number={2} teamCard={team2Stack} thisTurn={turn} deleteCard={deleteCardFromTeam} />
-      <Team number={3} teamCard={team3Stack} thisTurn={turn} deleteCard={deleteCardFromTeam} />
-      <Team number={4} teamCard={team4Stack} thisTurn={turn} deleteCard={deleteCardFromTeam} />
-      <Team number={5} teamCard={team5Stack} thisTurn={turn} deleteCard={deleteCardFromTeam} />
+      <Team number={1} teamCard={team1Stack} thisTurn={turn} deleteCard={deleteCardFromTeam} levels={levels[1]}/>
+      <Team number={2} teamCard={team2Stack} thisTurn={turn} deleteCard={deleteCardFromTeam} levels={levels[2]}/>
+      <Team number={3} teamCard={team3Stack} thisTurn={turn} deleteCard={deleteCardFromTeam} levels={levels[3]}/>
+      <Team number={4} teamCard={team4Stack} thisTurn={turn} deleteCard={deleteCardFromTeam} levels={levels[4]}/>
+      <Team number={5} teamCard={team5Stack} thisTurn={turn} deleteCard={deleteCardFromTeam} levels={levels[5]}/>
 
         
       </div>
