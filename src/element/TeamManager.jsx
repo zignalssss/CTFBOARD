@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-function TeamManager() {
+function TeamManager(props) {
     const anti_virus = ['Norton', 'Bitdefender', 'Avira Antivirus', 'McAfee'];
     const OS = ['Windows', 'Linux'];
 
     // State to manage the level for each antivirus and OS
     const initialLevels = {
-        knowledgeLevel: 0,
+        "Knowledge Level": 0,
         ...anti_virus.reduce((acc, curr) => ({ ...acc, [curr]: 0 }), {}),
         ...OS.reduce((acc, curr) => ({ ...acc, [curr]: 0 }), {}),
     };
@@ -21,6 +21,13 @@ function TeamManager() {
         }));
     };
 
+
+    useEffect(()=>{
+        //console.log(levels);
+        if (props.onLevelsChange){
+            props.onLevelsChange(levels);
+        }
+    },[Object.values(levels),props.onLevelsChange])
     return (
         <div className="team-manager px-2">
             <h1>Team Manager</h1>
@@ -28,9 +35,9 @@ function TeamManager() {
             <div className="control-panel flex justify-between px-5">
                 <h3>Knowledge Level</h3>
                 <div className='flex flex-cols-2 gap-10'>
-                <button onClick={() => handleLevelChange('knowledgeLevel', -1)}>-</button>
-                <span>{levels.knowledgeLevel}</span>
-                <button onClick={() => handleLevelChange('knowledgeLevel', 1)}>+</button>
+                <button onClick={() => handleLevelChange('Knowledge Level', -1)}>-</button>
+                <span>{levels["Knowledge Level"]}</span>
+                <button onClick={() => handleLevelChange('Knowledge Level', 1)}>+</button>
                 </div>
             </div>
 
